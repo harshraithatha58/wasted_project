@@ -33,7 +33,7 @@
             <div class="signin-content">
                 <div class="signin-image">
                     <figure><img src="colorlib-regform-7/colorlib-regform-7/images/signin-image.jpg" alt="sing in image"></figure>
-                    <a href="signup.html" class="signup-image-link">Create an account</a>
+                    <a href="signup.php" class="signup-image-link">Create an account</a>
                 </div>
 
                 <div class="signin-form">
@@ -73,36 +73,18 @@
     </section>
     </div>
     <?php
-    $conn = mysqli_connect('localhost', 'root', '', 'harr');
+    // $conn = mysqli_connect('localhost', 'root', '', 'main');
 
-    if ($conn) {
+    // if (isset($_POST['submit'])) {
 
+    //     $username = $_POST['your_name'];
 
-        echo "Connected sucessfully";
-    } else {
+    //     $password = $_POST['your_pass'];
 
-        echo "ERROR";
-    }
-    if (isset($_POST['submit'])) {
-
-        $username = $_POST['your_name'];
-
-        $password = $_POST['your_pass'];
-
-        $in = "INSERT into `user` (`name`,`pass`)values('$username','$password')";
-
-        $result = mysqli_query($conn, $in);
-
-        if ($result) {
-
-            echo '<script>alert("Data Inserted successfully")</script>';
-        } else {
-
-            echo "DATANOT INSERTED ERROR";
-        }
-        header("Location: dashboard/admin/production/index.php");
-        exit;
-    }
+        
+    //     header("Location: dashboard/admin/production/index.php");
+    //     exit;
+    // }
     ?>
     <!-- JS -->
     <script src="vendor/jquery/jquery.min.js"></script>
