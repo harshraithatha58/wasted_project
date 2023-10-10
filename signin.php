@@ -1,3 +1,48 @@
+<?php
+session_start();
+
+
+$conn = mysqli_connect('localhost', 'root', '', 'main');
+
+if (isset($_POST['submit'])) {
+    $useremail = $_POST['email'];
+    $password = $_POST['your_pass'];
+    // session names 
+    $_SESSION['email'] = $useremail;
+    
+    
+    //validation checks 
+
+    $check_sql = 'SELECT count(*) as count FROM `user_info` WHERE email="' . $useremail . '" and password="' . $password . '"';
+    $result = mysqli_query($conn, $check_sql);
+    
+    if ($result) {
+        $row = mysqli_fetch_assoc($result);
+        $count = $row['count'];
+    }
+    if ($count == 1) {
+
+        if (isset($_POST['status'])) {
+            $status = $_POST['status'];
+            if ($status == 'company') {
+                header("Location:  dashboard/Company/Production/index2.php");
+                exit;
+            }
+            if ($status == 'employee') {
+                header("Location:  dashboard/Employee/Production/index3.php");
+                exit;
+            } else {
+                header("Location: dashboard/Admin/index.php");
+                exit;
+            }
+        }
+    }
+    else{
+        header("Location: ./signin.php");
+        exit;
+    }
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -26,34 +71,35 @@
 </head>
 
 <body>
-
     <!-- Sing in  Form -->
+    
     <section class="sign-in">
+        
         <div class="container" style="margin-top: 5%;">
             <div class="signin-content">
                 <div class="signin-image">
                     <figure><img src="colorlib-regform-7/colorlib-regform-7/images/signin-image.jpg" alt="sing in image"></figure>
                     <a href="signup.php" class="signup-image-link">Create an account</a>
                 </div>
-
+                
                 <div class="signin-form">
                     <h2 class="form-title">Sign In</h2>
                     <!-- DB -->
                     <form method="POST" class="register-form" id="login-form">
                         <div class="form-group">
-                            <label for="your_name"><i class="zmdi zmdi-account material-icons-name"></i></label>
-                            <input type="text" name="your_name" id="your_name" placeholder="Your Name" required>
+                            <label for="email"><i class="zmdi zmdi-account material-icons-name"></i></label>
+                            <input type="email" name="email" id="email" placeholder="Email" required>
                         </div>
                         <div class="form-group">
                             <label for="your_pass"><i class="zmdi zmdi-lock"></i></label>
                             <input type="password" name="your_pass" id="your_pass" placeholder="Password" minlength="8" required>
                         </div>
                         <div class="form-group">
-                            <input type="radio" name="agree-term" id="agree-term" class="agree-term" />
+                            <input type="radio" name="status" id="agree-term" class="agree-term" value="company">
                             <label for="agree-term" class="label-agree-term"><span><span>Company</label>
                         </div>
                         <div class="form-group">
-                            <input type="radio" name="agree-term" id="agree-term" class="agree-term" />
+                            <input type="radio" name="status" id="agree-term" class="agree-term" value="employee">
                             <label for="agree-term" class="label-agree-term"><span></span>Employee</label>
                         </div>
                         <div>
@@ -72,20 +118,7 @@
         </div>
     </section>
     </div>
-    <?php
-    // $conn = mysqli_connect('localhost', 'root', '', 'main');
 
-    // if (isset($_POST['submit'])) {
-
-    //     $username = $_POST['your_name'];
-
-    //     $password = $_POST['your_pass'];
-
-        
-    //     header("Location: dashboard/admin/production/index.php");
-    //     exit;
-    // }
-    ?>
     <!-- JS -->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="js/main.js"></script>
