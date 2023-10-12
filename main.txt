@@ -1,0 +1,3 @@
+dont touch this pls --
+sql querry insert into employee
+INSERT INTO `companies` (`srno`, `name_of_company`, `cin`, `ceo_founder`, `address`, `email`, `password`, `description`, `time`) VALUES ('1', 'admin', '1234567890987654321', 'harsh raithatha', 'online', 'admin@majduri.com', 'majdurileloguys', '.....', current_timestamp());

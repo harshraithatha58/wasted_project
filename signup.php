@@ -112,8 +112,8 @@ if (isset($_POST['submit'])) {
         <section class="signup">
             <div class="container">
                 <div class="signup-content">
-                    <div class="signup-form">
-                        <h2 class="form-title">Sign up</h2>
+                    <div class="signup-form mt-3">
+                        <h2 class="form-title ">Sign up</h2>
                         <!-- DB -->
                         <form method="POST" class="register-form" id="register-form">
                             <div class="form-group">
@@ -133,28 +133,19 @@ if (isset($_POST['submit'])) {
                                 <input type="password" name="re_password" id="re_password" placeholder="Repeat your password" required>
                             </div>
                             <div>
-                                <!-- change text area to enable when clicked on company radio button-->
-                                <label for="text"><i class="zmdi zmdi-lock-outline"></i></label>
-                                <input type="text" name="CIN" id="CIN" placeholder="CIN Number" required aria-label="Disabled input example" disabled>
+                                <label for="Address"><i class="zmdi zmdi-account"></i></label>
+                                <textarea style="resize: none;" class="mb-2 rounded-2" name="Address" id="Address" cols="63" rows="5" placeholder="Company Address"></textarea>
                             </div>
-                            <div class="form-group">
-                                <input type="radio" name="status" id="agree-term" class="agree-term" value="Company">
-                                <label for="agree-term" class="label-agree-term">Company</label>
-                            </div>
-                            <div class="form-group">
-                                <input type="radio" name="status" id="agree-term" class="agree-term" value="Employee">
-                                <label for="agree-term" class="label-agree-term">Employee</label>
-                            </div>
-                            <div class="form-group form-button">
-                                <button type="submit" class="btn btn-lg bd-btn-lg btn-outline-primary" name="submit">Sign Up</button>
-
-                            </div>
+                            <span class="form-group form-button">
+                                <button type="submit" class="btn btn-lg bd-btn-lg btn-outline-primary" name="submit mt-2">Sign Up</button>
+                                <a href="./hr_signup.php" class="signup-image-link mt-2" style="font-size: larger; text-decoration: none;">Continue as Hr</a>
+                            </span>
                         </form>
                     </div>
                     <div class="signup-image">
                         <figure><img src="colorlib-regform-7/colorlib-regform-7/images/signup-image.jpg" alt="sing up image"></figure>
                         <a href="./signin.php" class="signup-image-link">I am already member</a>
-                    </div>
+                      </div>
                 </div>
             </div>
         </section>

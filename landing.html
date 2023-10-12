@@ -1,230 +1,104 @@
-<!DOCTYPE html>
-<html lang="en-US" dir="ltr">
 
+
+
+
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="icon" href="../../favicon.ico">
+  <link rel="canonical" href="https://getbootstrap.com/docs/3.4/examples/navbar-fixed-top/">
 
+  <title>Fixed Top Navbar Example for Bootstrap</title>
 
-  <!-- ===============================================-->
-  <!--    Document Title-->
-  <!-- ===============================================-->
-  <title>Landing</title>
+  <!-- Bootstrap core CSS -->
+  <link href="../../dist/css/bootstrap.min.css" rel="stylesheet">
 
+  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  <link href="../../assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
 
-  <!-- ===============================================-->
-  <!--    Favicons-->
-  <!-- ===============================================-->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-  <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicons/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicons/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicons/favicon-16x16.png">
-  <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicons/favicon.ico">
-  <link rel="manifest" href="assets/img/favicons/manifest.json">
-  <meta name="msapplication-TileImage" content="assets/img/favicons/mstile-150x150.png">
-  <meta name="theme-color" content="#ffffff">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <!-- Custom styles for this template -->
+  <link href="navbar-fixed-top.css" rel="stylesheet">
 
+  <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+  <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+  <script src="../../assets/js/ie-emulation-modes-warning.js"></script>
 
-  <!-- ===============================================-->
-  <!--    Stylesheets-->
-  <!-- ===============================================-->
-  <link href="assets/css/theme.css" rel="stylesheet" />
-
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+    <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+  <![endif]-->
 </head>
-
-<style>
-
-</style>
-
 <body>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-    crossorigin="anonymous"></script>
 
-  <!-- ===============================================-->
-  <!--    Main Content-->
-  <!-- ===============================================-->
-  <main class="main" id="top">
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3 d-block navbar-klean"
-      data-navbar-on-scroll="data-navbar-on-scroll">
-      <div class="container"><a class="navbar-brand" href="index.html"> <img class="me-3 d-inline-block"
-            src="assets/img/gallery/logo.png" alt="" /></a>
-        <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse"
-          data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-          aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-        <div class="collapse navbar-collapse border-top border-lg-0 mt-4 mt-lg-0" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto pt-2 pt-lg-0 font-base">
-            <li class="nav-item px-2" data-anchor="data-anchor"><a class="nav-link fw-medium active rounded-pill"
-                aria-current="page" href="#home">ideas</a></li>
-            <li class="nav-item px-2" data-anchor="data-anchor"><a class="nav-link" href="#service">Service</a></li>
-
-            <li class="nav-item px-2" data-anchor="data-anchor"><a class="nav-link" href="#testimonial">Testimonial</a>
-            </li>
-            <li class="nav-item px-2" data-anchor="data-anchor"><a class="nav-link" href="#contact">Contact</a></li>
-          </ul>
-        </div>
-        <form>
-          <button class="btn btn-lg btn-klean-outline order-0 fs-0" type="submit">
-            <span class="text-gradient fw-bold">
-              <img class="me-9 d-inline-block rounded-circle" src="https://source.unsplash.com/50x50/?profile"
-                alt="#"><a href="profile/index.html">Name</a>
-            </span>
-          </button>
-        </form>
-      </div>
-    </nav>
-    <div id="carouselExampleCaptions" class="carousel slide carousel-fade">
-      <div class="carousel-indicators">
-        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
-          aria-current="true" aria-label="Slide 1"></button>
-        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
-          aria-label="Slide 2"></button>
-        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
-          aria-label="Slide 3"></button>
-      </div>
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <img src="https://source.unsplash.com/1700x600/?interview" class="d-block w-100" alt="...">
-        </div>
-        <div class="carousel-item">
-          <img src="https://source.unsplash.com/1700x600/?meeting" class="d-block w-100" alt="...">
-
-        </div>
-        <div class="carousel-item">
-          <img src="https://source.unsplash.com/1700x600/?conference" class="d-block w-100" alt="...">
-        </div>
-      </div>
-      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
-        data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
-        data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
-    </div>
-    <div class="card my-4 col-6" style="width: 18rem;">
-      <img src="https://source.unsplash.com/200x200/?interview" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-          content.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
-      </div>
-    </div>
+  <!-- Fixed navbar -->
+  <nav class="navbar navbar-default navbar-fixed-top">
     <div class="container">
-      <div class="row justify-content-lg-between circle-blend-right circle-danger">
-        <div class="col-6 col-sm-4 col-lg-auto mb-3">
-          <h5 class="text-600 mb-3 fw-bold">About</h5>
-          <ul class="list-unstyled mb-md-4 mb-lg-0">
-            <li class="mb-2"><a class="text-400 text-decoration-none" href="#!">About</a></li>
-            <li class="mb-2"><a class="text-400 text-decoration-none" href="#!">Resources</a></li>
-            <li class="mb-2"><a class="text-400 text-decoration-none" href="#!">Team</a></li>
-            <li class="mb-2"><a class="text-400 text-decoration-none" href="#!">Blog</a></li>
-          </ul>
-        </div>
-        <div class="col-6 col-sm-4 col-lg-auto mb-3">
-          <h5 class="text-600 mb-3 fw-bold">Resources </h5>
-          <ul class="list-unstyled mb-md-4 mb-lg-0">
-            <li class="mb-2"><a class="text-400 text-decoration-none" href="#!">Terms</a></li>
-            <li class="mb-2"><a class="text-400 text-decoration-none" href="#!">Help</a></li>
-            <li class="mb-2"><a class="text-400 text-decoration-none" href="#!">Privacy</a></li>
-          </ul>
-        </div>
-        <div class="col-6 col-sm-4 col-lg-auto mb-3">
-          <h5 class="text-600 mb-3 fw-bold">Team</h5>
-          <ul class="list-unstyled mb-md-4 mb-lg-0">
-            <li class="mb-2"><a class="text-400 text-decoration-none" href="#!">Developer</a></li>
-            <li class="mb-2"><a class="text-400 text-decoration-none" href="#!">Designer</a></li>
-          </ul>
-        </div>
-        <div class="col-6 col-sm-4 col-lg-auto mb-3">
-          <h5 class="text-600 mb-3 fw-bold">Blog</h5>
-          <ul class="list-unstyled mb-md-4 mb-lg-0">
-            <li class="mb-2"><a class="text-400 text-decoration-none" href="#!">Team Leader</a></li>
-            <li class="mb-2"><a class="text-400 text-decoration-none" href="#!">Lifestyle</a></li>
-            <li class="mb-2"><a class="text-400 text-decoration-none" href="#!">Article</a></li>
-            <li class="mb-2"><a class="text-400 text-decoration-none" href="#!">Tech</a></li>
-          </ul>
-        </div>
-        <div class="col-9 col-sm-6 col-lg-auto mb-3">
-          <h5 class="text-600 mb-3 fw-bold">Follow Us</h5>
-          <ul class="list-unstyled list-inline my-3">
-            <li class="list-inline-item"><a class="text-decoration-none" href="#!"><img class="list-social-icon"
-                  src="assets/img/icons/facebook.svg" alt="" width="25" /></a></li>
-            <li class="list-inline-item"><a class="text-decoration-none" href="#!"><img class="list-social-icon"
-                  src="assets/img/icons/twitter.svg" alt="" width="25" /></a></li>
-            <li class="list-inline-item"><a class="text-decoration-none" href="#!"><img class="list-social-icon"
-                  src="assets/img/icons/linkdin.svg" alt="" width="25" /></a></li>
-            <li class="list-inline-item"><a class="text-decoration-none" href="#!"><img class="list-social-icon"
-                  src="assets/img/icons/youtube.svg" alt="" width="25" /></a></li>
-            <li class="list-inline-item"><a class="text-decoration-none" href="#!"></a></li>
-          </ul>
-          <p class="fw-semi-bold mt-4 mb-3">Subscribe to our newsletter</p>
-          <label class="col-sm-2 col-form-label visually-hidden" for="inputEmail2">Email</label>
-          <div class="col-sm-12 input-group-icon">
-            <input class="form-control rounded-pill border-white py-1 px-4" id="inputEmail2" type="email"
-              placeholder="email" />
-            <svg class="bi bi-envelope-fill input-box-icon" xmlns="http://www.w3.org/2000/svg" width="12" height="12"
-              fill="currentColor" viewBox="0 0 16 16" style="left:.8rem;">
-              <path
-                d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555zM0 4.697v7.104l5.803-3.558L0 4.697zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757zm3.436-.586L16 11.801V4.697l-5.803 3.546z">
-              </path>
-            </svg>
-          </div>
-        </div>
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">Project name</a>
       </div>
-      <hr class="text-100 mb-0" />
-      <div class="row justify-content-md-between justify-content-evenly py-3">
-        <div class="col-12 col-sm-8 col-md-6 col-lg-auto text-center text-md-start">
-          <p class="fs--1 my-2 fw-bold">All rights Reserved &copy; XYZ, 2023</p>
-        </div>
-        <div class="col-12 col-sm-8 col-md-6">
-          <p class="fs--1 my-2 text-center text-md-end"> Made with&nbsp;
-            <svg class="bi bi-suit-heart-fill" xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="#EB6453"
-              viewBox="0 0 16 16">
-              <path
-                d="M4 1c2.21 0 4 1.755 4 3.92C8 2.755 9.79 1 12 1s4 1.755 4 3.92c0 3.263-3.234 4.414-7.608 9.608a.513.513 0 0 1-.784 0C3.234 9.334 0 8.183 0 4.92 0 2.755 1.79 1 4 1z">
-              </path>
-            </svg>&nbsp;by&nbsp;<a class="fw-bold text-500" href="https://themewagon.com/" target="_blank">XYZ
-            </a>
-          </p>
-        </div>
-      </div>
+      <div id="navbar" class="navbar-collapse collapse">
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Action</a></li>
+              <li><a href="#">Another action</a></li>
+              <li><a href="#">Something else here</a></li>
+              <li role="separator" class="divider"></li>
+              <li class="dropdown-header">Nav header</li>
+              <li><a href="#">Separated link</a></li>
+              <li><a href="#">One more separated link</a></li>
+            </ul>
+          </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="../navbar/">Default</a></li>
+          <li><a href="../navbar-static-top/">Static top</a></li>
+          <li class="active"><a href="./">Fixed top <span class="sr-only">(current)</span></a></li>
+        </ul>
+      </div><!--/.nav-collapse -->
     </div>
-    </section>
-  </main>
-  <!-- ===============================================-->
-  <!--    End of Main Content-->
-  <!-- ===============================================-->
+  </nav>
+
+  <div class="container">
+
+    <!-- Main component for a primary marketing message or call to action -->
+    <div class="jumbotron">
+      <h1>Navbar example</h1>
+      <p>This example is a quick exercise to illustrate how the default, static and fixed to top navbar work. It includes the responsive CSS and HTML, so it also adapts to your viewport and device.</p>
+      <p>To see the difference between static and fixed top navbars, just scroll.</p>
+      <p>
+        <a class="btn btn-lg btn-primary" href="../../components/#navbar" role="button">View navbar docs »</a>
+      </p>
+    </div>
+
+  </div> <!-- /container -->
 
 
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
+  <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+  <script src="../../dist/js/bootstrap.min.js"></script>
+  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
 
 
-  <!-- ===============================================-->
-  <!--    JavaScripts-->
-  <!-- ===============================================-->
-  <script src="vendors/@popperjs/popper.min.js"></script>
-  <script src="vendors/bootstrap/bootstrap.min.js"></script>
-  <script src="vendors/is/is.min.js"></script>
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=window.scroll"></script>
-  <script src="vendors/feather-icons/feather.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-    crossorigin="anonymous"></script>
-  <script>
-    feather.replace();
-  </script>
-  <script src="assets/js/theme.js"></script>
-
-  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800;900&amp;display=swap"
-    rel="stylesheet">
 </body>
-
 </html>

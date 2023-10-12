@@ -28,19 +28,21 @@
         <div class="col-md-3 left_col">
           <div class="left_col scroll-view" style="background-color: white ">
             <div class="navbar nav_title" style="border: 0; background-color: white ">
-              <a href="index.html" class="site_title"><i class="fa fa-paw"></i> <span>Gentelella Alela!</span></a>
+              <a href="index.html" class="site_title"><i class="fa fa-paw"></i> <span><font color="black">Gentelella Alela!</font></span></a>
             </div>
 
             <div class="clearfix"></div>
 
             <!-- menu profile quick info -->
             <div class="profile clearfix">
-              <div class="profile_pic">
+              <div class="profile_pic"> 
                 <img src="images/img.jpg" alt="..." class="img-circle profile_img">
               </div>
               <div class="profile_info">
-                <span>Welcome,</span>
-                <h2>John Doe</h2>
+                <span><font color="black">Welcome,</font></span><br>
+                <font color="black">
+                John Doe
+                </font>
               </div>
             </div>
             <!-- /menu profile quick info -->
@@ -50,32 +52,28 @@
             <!-- sidebar menu -->
             <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
               <div class="menu_section">
-                <h3>General</h3>
                 <ul class="nav side-menu">
                   <li>
                     <a href="index2.php">
-                      <i class="fa fa-home"></i>
-                       Home 
+                      <font color="black"><i class="fa fa-home"></i>
+                       Home </font>
                     </a>
                   </li>
                   
                   <li>
                     <a href="echarts.html">
-                      <i class="fa fa-bar-chart-o"></i>
-                       E-Charts 
+                    <font color="black"><i class="fa fa-bar-chart-o"></i>
+                       E-Charts </font>
                     </a>
+                  </li>
+                  <li>
+                    <a href="#"><font color="black">
+                      <i class="fa fa-laptop"></i>
+                       Landing Page </font>
+                      </a>
                   </li>
                 </ul>
               </div>
-              <div class="menu_section">
-                <ul class="nav side-menu">
-                  
-                  
-                                  
-                  <li><a href="#"><i class="fa fa-laptop"></i> Landing Page </a></li>
-                </ul>
-              </div>
-
             </div>
             <!-- /sidebar menu -->
 
@@ -185,7 +183,7 @@
                 <div class="tile-stats">
                   <div class="icon"><i class="fa fa-caret-square-o-right"></i></div>
                   <div class="count">179</div>
-                  <h3>New Sign ups</h3>
+                  <h3>Lorem, ipsum.</h3>
                   <p>Lorem ipsum psdea itgum rixt.</p>
                 </div>
               </div>
@@ -193,7 +191,7 @@
                 <div class="tile-stats">
                   <div class="icon"><i class="fa fa-comments-o"></i></div>
                   <div class="count">179</div>
-                  <h3>New Sign ups</h3>
+                  <h3>Lorem, ipsum.</h3>
                   <p>Lorem ipsum psdea itgum rixt.</p>
                 </div>
               </div>
@@ -201,7 +199,7 @@
                 <div class="tile-stats">
                   <div class="icon"><i class="fa fa-sort-amount-desc"></i></div>
                   <div class="count">179</div>
-                  <h3>New Sign ups</h3>
+                  <h3>Lorem, ipsum.</h3>
                   <p>Lorem ipsum psdea itgum rixt.</p>
                 </div>
               </div>
@@ -209,7 +207,7 @@
                 <div class="tile-stats">
                   <div class="icon"><i class="fa fa-check-square-o"></i></div>
                   <div class="count">179</div>
-                  <h3>New Sign ups</h3>
+                  <h3>Lorem, ipsum.</h3>
                   <p>Lorem ipsum psdea itgum rixt.</p>
                 </div>
               </div>

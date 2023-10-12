@@ -83,7 +83,7 @@ if (isset($_POST['submit'])) {
                 </div>
                 
                 <div class="signin-form">
-                    <h2 class="form-title">Sign In</h2>
+                    <h2 class="form-title mt-6">Sign In</h2>
                     <!-- DB -->
                     <form method="POST" class="register-form" id="login-form">
                         <div class="form-group">
@@ -94,21 +94,10 @@ if (isset($_POST['submit'])) {
                             <label for="your_pass"><i class="zmdi zmdi-lock"></i></label>
                             <input type="password" name="your_pass" id="your_pass" placeholder="Password" minlength="8" required>
                         </div>
-                        <div class="form-group">
-                            <input type="radio" name="status" id="agree-term" class="agree-term" value="company">
-                            <label for="agree-term" class="label-agree-term"><span><span>Company</label>
-                        </div>
-                        <div class="form-group">
-                            <input type="radio" name="status" id="agree-term" class="agree-term" value="employee">
-                            <label for="agree-term" class="label-agree-term"><span></span>Employee</label>
-                        </div>
                         <div>
                             <button type="submit" class="btn btn-lg bd-btn-lg btn-outline-primary" name="submit">
                                 <span>
-
-
                                     Sign in
-
                                 </span>
                             </button>
                         </div>
