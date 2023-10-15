@@ -67,7 +67,7 @@
                     </a>
                   </li>
                   <li>
-                    <a href="#"><font color="black">
+                    <a href="../../../Landing/index.php"><font color="black">
                       <i class="fa fa-laptop"></i>
                        Landing Page </font>
                       </a>
@@ -100,7 +100,7 @@
                           <span>Settings</span>
                         </a>
                     <a class="dropdown-item"  href="javascript:;">Help</a>
-                      <a class="dropdown-item"  href="login.html"><i class="fa fa-sign-out pull-right"></i> Log Out</a>
+                      <a class="dropdown-item"  href="../../../signin.php"><i class="fa fa-sign-out pull-right"></i> Log Out</a>
                     </div>
                   </li>
   

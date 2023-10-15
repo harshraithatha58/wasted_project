@@ -1,3 +1,6 @@
+<?php
+require '_conn.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,25 +15,22 @@
 
     <!-- Main css -->
     <link rel="stylesheet" href="colorlib-regform-7/colorlib-regform-7/css/style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7Rxn☻atzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 
 </head>
 
 <body>
     <div class="main">
-        <div class="alert alert-warning alert-dismissible fade show" role="alert" style="margin-left:7%;margin-right:7%;text-align: center;">
-            You will redirected to hr sign up page if your input does not satisfy
-            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-        </div>
+        
 
         <!-- Sign up form -->
         <section class="signup">
             <div class="container">
                 <div class="signup-content">
                     <div class="signup-form">
-                        <h2 class="form-title">hr Sign up</h2>
+                        <h2 class="form-title">HR Sign Up</h2>
                         <!-- DB -->
-                         <form method="POST" class="register-form" id="register-form">
+                        <form method="POST" class="register-form" id="register-form">
                             <div class="form-group">
                                 <label for="name"><i class="zmdi zmdi-account material-icons-name"></i></label>
                                 <input type="text" name="name" id="name" placeholder="Your Name" required>
@@ -39,7 +39,7 @@
                                 <label for="email"><i class="zmdi zmdi-email"></i></label>
                                 <input type="email" name="email" id="email" placeholder="Your Email" required>
                             </div>
-                             <div class="form-group">
+                            <div class="form-group">
                                 <label for="password"><i class="zmdi zmdi-lock"></i></label>
                                 <input type="password" name="password" id="password" placeholder="Password" required>
                             </div>
@@ -47,14 +47,14 @@
                                 <label for="re-password"><i class="zmdi zmdi-lock-outline"></i></label>
                                 <input type="password" name="re_password" id="re_password" placeholder="Repeat your password" required>
                             </div>
-                            <div>
-                                
-                                <ul>
-                                    <li>Company 1</li>
-                                    <li>Company 2</li>
-                                </ul>
-                            </div>
-                            <div class="form-group form-button">
+                            <div class="col">
+                            <br>
+                            <select id="inputState" class="form-select">
+                              <option selected>Select Your Company</option>
+                              <option>F Ux2</option>
+                            </select>
+                          </div>
+                            <div class="form-group form-button mt-5">
                                 <button type="submit" class="btn btn-lg bd-btn-lg btn-outline-primary" name="submit">Sign Up</button>
                             </div>
                         </form>

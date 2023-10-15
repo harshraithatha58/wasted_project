@@ -1,0 +1,23 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&display=swap');
+
+// Variables & Mixins
+@import "variables";
+@import "mixins";
+
+// Bootstrap Framework
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+// Components
+@import "components/buttons";
+@import "components/tooltip";
+
+// Panels
+@import "panels/sidebar";
+@import "panels/mailbox";
+@import "panels/mailcontent";
+@import "panels/compose";
+@import "panels/backdrop";
+
+// Plugins
+@import "plugins/scrollbar";

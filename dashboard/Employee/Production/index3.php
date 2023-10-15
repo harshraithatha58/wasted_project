@@ -1,3 +1,18 @@
+  <?php
+  require '../../../_conn.php';
+  
+  if(isset($_POST['logout'])){
+    $_SESSION['loggedin'] = false;
+    header('Location: ../../../logout.php');
+    exit;
+  }
+
+
+  if(isset($_POST['landing'])){
+    header('Location: ../../../Landing/index.php');
+    exit;
+  }
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -31,7 +46,7 @@
       <div class="col-md-3 left_col">
         <div class="left_col scroll-view" style="background-color: white ">
           <div class="navbar nav_title" style="border: 0; background-color: white ">
-            <a href="index.html" class="site_title"><i class="fa fa-paw"></i> <span>
+            <a href="index3.php" class="site_title"><i class="fa fa-paw"></i> <span>
                 <font color="black">Gentelella Alela!</font>
               </span></a>
           </div>
@@ -58,60 +73,46 @@
 
           <!-- sidebar menu -->
           <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
-            <div class="menu_section">
-              <ul class="nav side-menu">
-                <li>
-                  <a href="index3.php">
-                    <font color="black"><i class="fa fa-home"></i>
-                      Home </font>
-                  </a>
-                </li>
-
-                <li>
-                  <a href="form_wizards.html">
-                    <font color="black">
-                      <i class="fa fa-edit"></i>
-                      Wizard Form
-                    </font>
-                  </a>
-                </li>
-                <li>
-                  <a href="form_upload.html">
-                    <font color="black">
-                      <i class="fa fa-edit"></i>
-                      Upload Form
-                    </font>
-                  </a>
-                </li>
-
-                <li>
-                  <a href="inbox.html">
-                    <font color="black">
-                      <i class="fa fa-desktop"></i>
-                      Inbox
-                    </font>
-                  </a>
-                </li>
-                <li>
-                  <a href="echarts.html">
-                    <font color="black"><i class="fa fa-bar-chart-o"></i>
-                      E-Charts </font>
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    <font color="black">
-                      <i class="fa fa-laptop"></i>
-                      Landing Page
-                    </font>
-                  </a>
-                </li>
-              </ul>
-            </div>           
+              <div class="menu_section">
+                <ul class="nav side-menu">
+                  <li>
+                    <a href="index3.php">
+                      <font color="black"><i class="fa fa-home"></i>
+                        Home </font>
+                    </a>
+                  </li>
+  
+                  <li>
+                    <a href="form_wizards.html">
+                      <font color="black">
+                        <i class="fa fa-edit"></i>
+                        Wizard Form
+                      </font>
+                    </a>
+                  </li>
+                  
+  
+                  
+                  <li>
+                    <a href="echarts.html">
+                      <font color="black"><i class="fa fa-bar-chart-o"></i>
+                        E-Charts </font>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="../../../Landing/index.php">
+                      <font color="black">
+                        <i class="fa fa-laptop"></i>
+                        Landing Page
+                      </font>
+                    </a>
+                  </li>
+                </ul>
+              </div>           
+            </div>
+            <!-- /sidebar menu -->           
           </div>
-          <!-- /sidebar menu -->
         </div>
-      </div>
 
       <!-- top navigation -->
       <div class="top_nav">
@@ -126,13 +127,15 @@
                   <img src="images/img.jpg" alt="">John Doe
                 </a>
                 <div class="dropdown-menu dropdown-usermenu pull-right" aria-labelledby="navbarDropdown">
-                  <a class="dropdown-item" href="javascript:;"> Profile</a>
+                  <a class="dropdown-item" href="../../../profile/index.html"> Profile</a>
                   <a class="dropdown-item" href="javascript:;">
                     <span class="badge bg-red pull-right">50%</span>
                     <span>Settings</span>
                   </a>
                   <a class="dropdown-item" href="javascript:;">Help</a>
-                  <a class="dropdown-item" href="login.html"><i class="fa fa-sign-out pull-right"></i> Log Out</a>
+                  <button style="display: inline; border: transparent solid 0px; background-color: transparent;" name="logout">
+                    <a class="dropdown-item" href="../../../logout.php"><i class="fa fa-sign-out pull-right"></i> Log Out</a>
+                  </button>
                 </div>
               </li>
 

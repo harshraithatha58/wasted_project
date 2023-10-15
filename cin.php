@@ -1,3 +1,6 @@
+<?php
+require '_conn.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 

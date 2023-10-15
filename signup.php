@@ -1,88 +1,44 @@
 <?php
-session_start();
-$conn = mysqli_connect('localhost', 'root', '', 'main');
+require '_conn.php';
+$check_email  = true;
+$check_password  = true;
+
 if (isset($_POST['submit'])) {
-
-    $name = $_POST['name'];
+    $name = strip_tags($_POST['name']);
     $email = $_POST['email'];
-    $password = $_POST['password'];
-    $re_password = $_POST['re_password'];
+    $password = $_POST['pass'];
+    $repassword = $_POST['re_pass'];
+    global $check_password;
+    global $check_email;
+    $check_email = false;
+    $check_password = false;
 
 
-    //session variable
-    $_SESSION['email'] = $email;
-
-    // <--- SECURITY CHECKS --->
-    $checked_email = false;
-    // email check 
-    $sql = 'SELECT count(*) FROM `user_info` WHERE email="' . $email . '"';
+    $sql = "select * from `employee` where email='$email'";
     $result = mysqli_query($conn, $sql);
-
-    if ($result) {
-        $row = mysqli_fetch_assoc($result);
-        $count = $row['count'];
+    if ($password == $repassword) {
+        $check_password = true;
+        $hash = password_hash($password, PASSWORD_DEFAULT);
+    } else {
+        $check_password = false;
     }
-    if ($count == 0) {
-
-        function isValidEmail($email)
-        {
-            // Check if the email has a valid format
-            if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
-                // Get the domain of the email address
-                list($username, $domain) = explode('@', $email);
-
-                // Check if the domain has valid DNS records
-                if (checkdnsrr($domain, 'MX') || checkdnsrr($domain, 'A')) {
-                    return true; // Valid email address
-                } else {
-                    // Domain does not exist
-                    header("Location: ./signup.php");
-                    exit;
-                }
-            } else {
-                // Invalid email format
-                header("Location: ./signup.php");
-                exit;
-            }
+    if (!$result) {
+        if ($check_password == true) {
+            $sql = "INSERT INTO `employee` (`email`, `password`, `name`, `time`) VALUES ('$email', '$hash', '$name', current_timestamp())";
+            $result = mysqli_query($conn, $sql);
+            header('Location: dashboard/Employee/Production/index3.php');
+            exit;
+        }else{
+            header('Location: ./signup.php');
+            exit;
         }
-    }
-    else{
-        header("Location: ./signup.php");
-        exit;
-    }
- 
-    // Example usage
-
-    if (isValidEmail($email)) {
-        echo "Email address is valid and domain exists.";
     } else {
-        echo "Invalid email address or domain does not exist.";
-    }
 
-    //checking password length ...
-    if (strlen($password) < 8) {
-        header("Location: ./signup.php");
-        exit;
     }
-    // radio button stored ..
-    if (isset($_POST["status"]) && !empty($_POST["status"])) {
-        $status = $_POST["status"];
-    }
-    // checking password is same 
-    if ($password == $re_password) {
-        $checked_password = $_POST['password'];
-        $in = "INSERT INTO `user_info` (`name`, `email`, `password`, `status`, `dt`) VALUES ('$name', '$email', '$checked_password', '$status', current_timestamp())";
-        $result = mysqli_query($conn, $in);
-        header("Location: dashboard/Admin/production/index.php");
-        exit;
-    } else {
-        $checked_password = "";
-        header("Location: ./signup.php");
-        exit;
-    }
+    
 }
-
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -93,68 +49,70 @@ if (isset($_POST['submit'])) {
     <title>Sign Up Form</title>
 
     <!-- Font Icon -->
-    <link rel="stylesheet" href="fonts/material-icon/css/material-design-iconic-font.min.css">
+    <link rel="stylesheet" href="./colorlib-regform-7/colorlib-regform-7/css/style.css">
 
     <!-- Main css -->
-    <link rel="stylesheet" href="colorlib-regform-7/colorlib-regform-7/css/style.css">
+    <link rel="stylesheet" href="./colorlib-regform-7/colorlib-regform-7/css/style.css">
+    <link rel="stylesheet" href="colorlib-regform-7/colorlib-regform-7/fonts/material-icon/css/material-design-iconic-font.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 
 </head>
 
 <body>
+
     <div class="main">
-        <div class="alert alert-warning alert-dismissible fade show" role="alert" style="margin-left:7%;margin-right:7%;text-align: center;">
-            You will redirected to sign up page if your input does not satisfy
-            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-        </div>
 
         <!-- Sign up form -->
         <section class="signup">
             <div class="container">
                 <div class="signup-content">
-                    <div class="signup-form mt-3">
-                        <h2 class="form-title ">Sign up</h2>
-                        <!-- DB -->
+                    <div class="signup-form">
+                        <h2 class="form-title">Sign up</h2>
                         <form method="POST" class="register-form" id="register-form">
                             <div class="form-group">
                                 <label for="name"><i class="zmdi zmdi-account material-icons-name"></i></label>
-                                <input type="text" name="name" id="name" placeholder="Your Name" required>
+                                <input type="text" name="name" id="name" placeholder="Your Name" />
                             </div>
                             <div class="form-group">
                                 <label for="email"><i class="zmdi zmdi-email"></i></label>
-                                <input type="email" name="email" id="email" placeholder="Your Email" required>
+                                <input type="email" name="email" id="email" placeholder="Your Email" />
                             </div>
                             <div class="form-group">
-                                <label for="password"><i class="zmdi zmdi-lock"></i></label>
-                                <input type="password" name="password" id="password" placeholder="Password" required>
+                                <label for="pass"><i class="zmdi zmdi-lock"></i></label>
+                                <input type="password" name="pass" id="pass" placeholder="Password" />
                             </div>
                             <div class="form-group">
-                                <label for="re-password"><i class="zmdi zmdi-lock-outline"></i></label>
-                                <input type="password" name="re_password" id="re_password" placeholder="Repeat your password" required>
+                                <label for="re-pass"><i class="zmdi zmdi-lock-outline"></i></label>
+                                <input type="password" name="re_pass" id="re_pass" placeholder="Repeat your password" />
                             </div>
-                            <div>
-                                <label for="Address"><i class="zmdi zmdi-account"></i></label>
-                                <textarea style="resize: none;" class="mb-2 rounded-2" name="Address" id="Address" cols="63" rows="5" placeholder="Company Address"></textarea>
+                            <div class="form-group">
+                                <input type="checkbox" name="agree-term" id="agree-term" class="agree-term" checked disabled>
+                                <label for="agree-term" class="label-agree-term"><span><span></span></span>I agree all
+                                    statements in <a href="#" class="term-service">Terms of service</a></label>
                             </div>
-                            <span class="form-group form-button">
-                                <button type="submit" class="btn btn-lg bd-btn-lg btn-outline-primary" name="submit mt-2">Sign Up</button>
-                                <a href="./hr_signup.php" class="signup-image-link mt-2" style="font-size: larger; text-decoration: none;">Continue as Hr</a>
-                            </span>
+                            <div class="form-group form-button">
+                                <span class="form-group form-button">
+                                    <button type="submit" class="btn btn-lg bd-btn-lg btn-outline-primary" name="submit" id="submit">Sign Up</button>
+
+                                </span>
+                            </div>
                         </form>
                     </div>
                     <div class="signup-image">
                         <figure><img src="colorlib-regform-7/colorlib-regform-7/images/signup-image.jpg" alt="sing up image"></figure>
                         <a href="./signin.php" class="signup-image-link">I am already member</a>
-                      </div>
+                        <a href="./hr_signup.php" class="signup-image-link mt-2">Sign up as HR</a>
+                    </div>
                 </div>
             </div>
         </section>
-        <!-- #region -->
-        <!-- JS -->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-        <script src="vendor/jquery/jquery.min.js"></script>
-        <script src="js/main.js"></script>
 
+        <!-- JS -->
+        <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
+            </script>
+        <script src="vendor/jquery/jquery.min.js"></script>
+        <script src="js/main.js"></script> -->
 </body>
 
 </html>

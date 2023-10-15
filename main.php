@@ -1,3 +1,8 @@
+<?php
+require '_conn.php';
+
+
+?>
 <!DOCTYPE html>
 <html lang="en-US" dir="ltr">
 
@@ -10,7 +15,7 @@
   <!-- ===============================================-->
   <!--    Document Title-->
   <!-- ===============================================-->
-  <title>Klean | Landing, Corporate &amp; Business Templatee</title>
+  <title>Klean | Landing, Corporate </title>
 
 
   <!-- ===============================================-->
@@ -63,7 +68,7 @@
 
             <button class="btn btn-lg btn-klean-outline order-0 fs-0" type="submit">
               <span class="text-gradient fw-bold">
-                <a href="signup.php">Sign
+                <a href="./signup.php">Sign
                   Up</a></span></button>
 
           </form>
@@ -227,7 +232,7 @@
           <div class="col-auto ms-lg-auto order-md-1 text-center">
             <div class="square shadow-square-top">
               <div class="card product-card-bg">.
-                <div class="card-body p-4"><img class="img-fluid border-img" src="assets/img/gallery/dedicatepng" width="350" alt="..." /></div>
+                <div class="card-body p-4"><img class="img-fluid border-img" src="assets/img/gallery/dedicate.png" width="350" alt="..." /></div>
               </div>
             </div>
           </div>
