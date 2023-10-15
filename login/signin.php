@@ -1,7 +1,15 @@
 <?php
+<<<<<<< HEAD:login/signin.php
 require('./_conn.php');
 if (isset($_SESSION['loggedin']) == false) {
     if (isset($_POST['submit'])) {
+=======
+require ('./_conn.php');
+if(isset($_SESSION['loggedin']) == false)
+{
+    if (isset($_POST['submit'])) 
+    {
+>>>>>>> 10e73c9 (login sign up done):signin.php
         $useremail = $_POST['email'];
         $password = $_POST['your_pass'];
 
@@ -10,6 +18,7 @@ if (isset($_SESSION['loggedin']) == false) {
         // true thai to redirect
 
         $sql = "select password from `employee` where email='$useremail'";
+<<<<<<< HEAD:login/signin.php
         $result = mysqli_query($conn, $sql);
         if ($result) {
             $row = mysqli_fetch_row($result);
@@ -47,6 +56,43 @@ if (isset($_SESSION['loggedin']) == false) {
     //     }
 }
 
+=======
+        $result = mysqli_query($conn , $sql);
+        if($result){
+            $row = mysqli_fetch_row($result);
+            $hashed_password = $row[0];
+            $password_varification = password_verify($password,$hashed_password );
+            if($password_varification){
+                $_SESSION['loggedin'] = true;
+                header('Location: dashboard/Employee/Production/index3.php');
+                exit;
+            }
+            //else
+            
+        }
+
+    }
+}
+else{
+
+    
+    $session_email = $_SESSION['session_email'];
+    $sql = "SELECT * FROM `employee` where email='$session_email'";
+    $result = mysqli_query($conn, $sql);
+        if ($result) {
+            header('Location: dashboard\Employee\Production\index3.php');
+            exit;
+            }
+    $sql = "SELECT * FROM `hr` where email='$session_email'";
+    $result_hr = mysqli_query($conn, $sql);
+        if ($result_hr) {
+            header('Location: dashboard\Employee\Production\index3.php');
+            exit;
+
+        }
+}
+    
+>>>>>>> 10e73c9 (login sign up done):signin.php
 ?>
 
 <!DOCTYPE html>
@@ -59,6 +105,7 @@ if (isset($_SESSION['loggedin']) == false) {
     <title>Sign In</title>
 
     <!-- Font Icon -->
+<<<<<<< HEAD:login/signin.php
     <link rel="stylesheet" href="../colorlib-regform-7/colorlib-regform-7/fonts/material-icon/css/material-design-iconic-font.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 
@@ -71,6 +118,22 @@ if (isset($_SESSION['loggedin']) == false) {
     <link rel="shortcut icon" type="image/x-icon" href="../assets/img/favicons/favicon.ico">
     <link rel="manifest" href="../assets/img/favicons/manifest.json">
     <meta name="msapplication-TileImage" content="../assets/img/favicons/mstile-150x150.png">
+=======
+    <link rel="stylesheet" href="fonts/material-icon/css/material-design-iconic-font.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <!-- Main css -->
+    <link rel="stylesheet" href="colorlib-regform-7/colorlib-regform-7/css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicons/favicon-16x16.png">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicons/favicon.ico">
+    <link rel="manifest" href="assets/img/favicons/manifest.json">
+    <meta name="msapplication-TileImage" content="assets/img/favicons/mstile-150x150.png">
+>>>>>>> 10e73c9 (login sign up done):signin.php
     <meta name="theme-color" content="#ffffff">
     <link href="../assets/css/theme.css" rel="stylesheet" />
 
@@ -84,7 +147,12 @@ if (isset($_SESSION['loggedin']) == false) {
         <div class="container" style="margin-top: 5%;">
             <div class="signin-content">
                 <div class="signin-image">
+<<<<<<< HEAD:login/signin.php
                     <figure><img src="../colorlib-regform-7/colorlib-regform-7/images/signin-image.jpg" alt="sing in image"></figure>
+=======
+                    <figure><img src="colorlib-regform-7/colorlib-regform-7/images/signin-image.jpg"
+                            alt="sing in image"></figure>
+>>>>>>> 10e73c9 (login sign up done):signin.php
                     <a href="signup.php" class="signup-image-link">Create an account</a>
                 </div>
 
@@ -98,7 +166,8 @@ if (isset($_SESSION['loggedin']) == false) {
                         </div>
                         <div class="form-group">
                             <label for="your_pass"><i class="zmdi zmdi-lock"></i></label>
-                            <input type="password" name="your_pass" id="your_pass" placeholder="Password" minlength="8" required>
+                            <input type="password" name="your_pass" id="your_pass" placeholder="Password" minlength="8"
+                                required>
                         </div>
                         <div>
                             <button type="submit" class="btn btn-lg bd-btn-lg btn-outline-primary" name="submit">
@@ -123,13 +192,19 @@ if (isset($_SESSION['loggedin']) == false) {
 <script src="vendors/is/is.min.js"></script>
 <script src="https://polyfill.io/v3/polyfill.min.js?features=window.scroll"></script>
 <script src="vendors/feather-icons/feather.min.js"></script>
+<<<<<<< HEAD:login/signin.php
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
+=======
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
+>>>>>>> 10e73c9 (login sign up done):signin.php
 </script>
 <script>
-    feather.replace();
+feather.replace();
 </script>
 <script src="assets/js/theme.js"></script>
 
-<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800;900&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800;900&amp;display=swap"
+    rel="stylesheet">
 
 </html>

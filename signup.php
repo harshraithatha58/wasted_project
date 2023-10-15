@@ -26,7 +26,11 @@ if (isset($_POST['submit'])) {
         if ($check_password == true) {
             $sql = "INSERT INTO `employee` (`email`, `password`, `name`, `time`) VALUES ('$email', '$hash', '$name', current_timestamp())";
             $result = mysqli_query($conn, $sql);
+<<<<<<< HEAD
             header('Location: ../dashboard/Employee/Production/index3.php');
+=======
+            header('Location: dashboard/Employee/Production/index3.php');
+>>>>>>> 10e73c9 (login sign up done)
             exit;
         }else{
             header('Location: ./signup.php');

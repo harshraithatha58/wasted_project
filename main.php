@@ -1,5 +1,9 @@
 <?php
+<<<<<<< HEAD
 require './login/_conn.php';
+=======
+require '_conn.php';
+>>>>>>> 10e73c9 (login sign up done)
 
 
 ?>
@@ -68,7 +72,11 @@ require './login/_conn.php';
 
             <button class="btn btn-lg btn-klean-outline order-0 fs-0" type="submit">
               <span class="text-gradient fw-bold">
+<<<<<<< HEAD
                 <a href="./login/signup.php">Sign
+=======
+                <a href="./signup.php">Sign
+>>>>>>> 10e73c9 (login sign up done)
                   Up</a></span></button>
 
           </form>

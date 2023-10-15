@@ -1,5 +1,9 @@
 <?php
+<<<<<<< HEAD:login/hr_signup.php
 require '../_conn.php';
+=======
+require '_conn.php';
+>>>>>>> 10e73c9 (login sign up done):hr_signup.php
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -14,7 +18,11 @@ require '../_conn.php';
     <link rel="stylesheet" href="../fonts/material-icon/css/material-design-iconic-font.min.css">
 
     <!-- Main css -->
+<<<<<<< HEAD:login/hr_signup.php
     <link rel="stylesheet" href="../colorlib-regform-7/colorlib-regform-7/css/style.css">
+=======
+    <link rel="stylesheet" href="colorlib-regform-7/colorlib-regform-7/css/style.css">
+>>>>>>> 10e73c9 (login sign up done):hr_signup.php
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7Rxn☻atzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 
 </head>

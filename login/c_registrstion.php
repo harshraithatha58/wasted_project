@@ -1,5 +1,9 @@
 <?php
+<<<<<<< HEAD:login/c_registrstion.php
 require '../_conn.php';
+=======
+require '_conn.php';
+>>>>>>> 10e73c9 (login sign up done):c_registrstion.php
 
 
 ?>

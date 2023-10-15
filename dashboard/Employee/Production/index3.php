@@ -7,10 +7,14 @@
     exit;
   }
 
+<<<<<<< HEAD
   if(!isset($_SESSION['loggedin']) == true){
     header('Location: ../../../signin.php');
     exit;
   }
+=======
+
+>>>>>>> 10e73c9 (login sign up done)
   if(isset($_POST['landing'])){
     header('Location: ../../../Landing/index.php');
     exit;
@@ -86,7 +90,11 @@
                   </li>
   
                   <li>
+<<<<<<< HEAD
                     <a href="form_wizards.php">
+=======
+                    <a href="form_wizards.html">
+>>>>>>> 10e73c9 (login sign up done)
                       <font color="black">
                         <i class="fa fa-edit"></i>
                         Wizard Form
@@ -97,7 +105,11 @@
   
                   
                   <li>
+<<<<<<< HEAD
                     <a href="echarts.php">
+=======
+                    <a href="echarts.html">
+>>>>>>> 10e73c9 (login sign up done)
                       <font color="black"><i class="fa fa-bar-chart-o"></i>
                         E-Charts </font>
                     </a>
@@ -131,6 +143,14 @@
                 </a>
                 <div class="dropdown-menu dropdown-usermenu pull-right" aria-labelledby="navbarDropdown">
                   <a class="dropdown-item" href="../../../profile/index.html"> Profile</a>
+<<<<<<< HEAD
+=======
+                  <a class="dropdown-item" href="javascript:;">
+                    <span class="badge bg-red pull-right">50%</span>
+                    <span>Settings</span>
+                  </a>
+                  <a class="dropdown-item" href="javascript:;">Help</a>
+>>>>>>> 10e73c9 (login sign up done)
                   <button style="display: inline; border: transparent solid 0px; background-color: transparent;" name="logout">
                     <a class="dropdown-item" href="../../../logout.php"><i class="fa fa-sign-out pull-right"></i> Log Out</a>
                   </button>
