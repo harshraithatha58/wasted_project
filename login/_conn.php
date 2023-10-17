@@ -15,6 +15,6 @@
         die("Connecting failed");
     }
     else{
-        echo "sucess :: bhagu don";
+        // echo "sucess :: bhagu don";
     }
 ?>
