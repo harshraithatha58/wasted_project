@@ -183,32 +183,16 @@
                 <div class="tile-stats">
                   <div class="icon"><i class="fa fa-caret-square-o-right"></i></div>
                   <div class="count">179</div>
-                  <h3>Lorem, ipsum.</h3>
-                  <p>Lorem ipsum psdea itgum rixt.</p>
+                  <h3>New Company Register.</h3>
+                  <p>Number of companies Newly Registered.</p>
                 </div>
               </div>
               <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 ">
                 <div class="tile-stats">
                   <div class="icon"><i class="fa fa-comments-o"></i></div>
-                  <div class="count">179</div>
-                  <h3>Lorem, ipsum.</h3>
-                  <p>Lorem ipsum psdea itgum rixt.</p>
-                </div>
-              </div>
-              <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 ">
-                <div class="tile-stats">
-                  <div class="icon"><i class="fa fa-sort-amount-desc"></i></div>
-                  <div class="count">179</div>
-                  <h3>Lorem, ipsum.</h3>
-                  <p>Lorem ipsum psdea itgum rixt.</p>
-                </div>
-              </div>
-              <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 ">
-                <div class="tile-stats">
-                  <div class="icon"><i class="fa fa-check-square-o"></i></div>
-                  <div class="count">179</div>
-                  <h3>Lorem, ipsum.</h3>
-                  <p>Lorem ipsum psdea itgum rixt.</p>
+                  <div class="count">17768</div>
+                  <h3>New Employees Registered</h3>
+                  <p>Number of employees Newly Registered.</p>
                 </div>
               </div>
             </div>
@@ -218,11 +202,11 @@
               <div class="col-md-12">
                 <div class="x_panel">
                   <div class="x_title">
-                    <h2>Transaction Summary <small>Weekly progress</small></h2>
+                    <h2>Placement Summary<small>Weekly progress</small></h2>
                     <div class="filter">
                       <div id="reportrange" class="pull-right" style="background: #fff; cursor: pointer; padding: 5px 10px; border: 1px solid #ccc">
                         <i class="glyphicon glyphicon-calendar fa fa-calendar"></i>
-                        <span>December 30, 2014 - January 28, 2015</span> <b class="caret"></b>
+                        <span>October 15, 2023 - October 22, 2023</span> <b class="caret"></b>
                       </div>
                     </div>
                     <div class="clearfix"></div>
@@ -425,7 +409,7 @@
                         <p class="day">23</p>
                       </a>
                       <div class="media-body">
-                        <a class="title" href="#">Item One Title</a>
+                        <a class="title" href="#">Vishwa mitra</a>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                       </div>
                     </article>
@@ -435,7 +419,7 @@
                         <p class="day">23</p>
                       </a>
                       <div class="media-body">
-                        <a class="title" href="#">Item Two Title</a>
+                        <a class="title" href="#">Ekta Lodaya</a>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                       </div>
                     </article>
@@ -445,7 +429,7 @@
                         <p class="day">23</p>
                       </a>
                       <div class="media-body">
-                        <a class="title" href="#">Item Two Title</a>
+                        <a class="title" href="#">Priyanshi Kukadiya</a>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                       </div>
                     </article>
@@ -455,8 +439,9 @@
                         <p class="day">23</p>
                       </a>
                       <div class="media-body">
-                        <a class="title" href="#">Item Two Title</a>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+   
+                     <a class="title" href="#">kashish Gohil</a>
+                        <p>Product Manager</p>
                       </div>
                     </article>
                     <article class="media event">
@@ -465,8 +450,8 @@
                         <p class="day">23</p>
                       </a>
                       <div class="media-body">
-                        <a class="title" href="#">Item Three Title</a>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <a class="title" href="#">Mrs.Truck</a>
+                        <p>Social Medi</p>
                       </div>
                     </article>
                   </div>
@@ -499,8 +484,8 @@
                         <p class="day">23</p>
                       </a>
                       <div class="media-body">
-                        <a class="title" href="#">Item One Title</a>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <a class="title" href="#">Junior Das</a>
+                        <p>Tech Advisor</p>
                       </div>
                     </article>
                     <article class="media event">
@@ -509,8 +494,8 @@
                         <p class="day">23</p>
                       </a>
                       <div class="media-body">
-                        <a class="title" href="#">Item Two Title</a>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <a class="title" href="#">Maha Devi</a>
+                        <p>Full Stack Developer</p>
                       </div>
                     </article>
                     <article class="media event">
@@ -519,8 +504,8 @@
                         <p class="day">23</p>
                       </a>
                       <div class="media-body">
-                        <a class="title" href="#">Item Two Title</a>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <a class="title" href="#">Dulani Priya</a>
+                        <p>Data analyst</p>
                       </div>
                     </article>
                     <article class="media event">
@@ -529,8 +514,8 @@
                         <p class="day">23</p>
                       </a>
                       <div class="media-body">
-                        <a class="title" href="#">Item Two Title</a>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <a class="title" href="#">Devi</a>
+                        <p>Graphic Designer</p>
                       </div>
                     </article>
                     <article class="media event">
@@ -539,8 +524,8 @@
                         <p class="day">23</p>
                       </a>
                       <div class="media-body">
-                        <a class="title" href="#">Item Three Title</a>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <a class="title" href="#">Das(khush Tanna)</a>
+                        <p>Front End Developer</p>
                       </div>
                     </article>
                   </div>
@@ -573,8 +558,8 @@
                         <p class="day">23</p>
                       </a>
                       <div class="media-body">
-                        <a class="title" href="#">Item One Title</a>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <a class="title" href="#">Dev</a>
+                        <p>Tech Analyst</p>
                       </div>
                     </article>
                     <article class="media event">
@@ -583,8 +568,8 @@
                         <p class="day">23</p>
                       </a>
                       <div class="media-body">
-                        <a class="title" href="#">Item Two Title</a>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <a class="title" href="#">Raithatha</a>
+                        <p>0</p>
                       </div>
                     </article>
                     <article class="media event">
@@ -593,8 +578,8 @@
                         <p class="day">23</p>
                       </a>
                       <div class="media-body">
-                        <a class="title" href="#">Item Two Title</a>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <a class="title" href="#">Tha-Tha</a>
+                        <p>Useless Developer</p>
                       </div>
                     </article>
                     <article class="media event">
@@ -603,8 +588,8 @@
                         <p class="day">23</p>
                       </a>
                       <div class="media-body">
-                        <a class="title" href="#">Item Two Title</a>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <a class="title" href="#">Apsara</a>
+                        <p>Pencil Developer</p>
                       </div>
                     </article>
                     <article class="media event">
@@ -613,26 +598,20 @@
                         <p class="day">23</p>
                       </a>
                       <div class="media-body">
-                        <a class="title" href="#">Item Three Title</a>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <a class="title" href="#">Devi Dut</a>
+                        <p>Null-Stack Developer</p>
                       </div>
                     </article>
                   </div>
                 </div>
+              </div>
               </div>
             </div>
           </div>
         </div>
         <!-- /page content -->
 
-        <!-- footer content -->
-        <footer>
-          <div class="pull-right">
-            Gentelella - Bootstrap Admin Template by <a href="https://colorlib.com">Colorlib</a>
-          </div>
-          <div class="clearfix"></div>
-        </footer>
-        <!-- /footer content -->
+        
       </div>
     </div>
 

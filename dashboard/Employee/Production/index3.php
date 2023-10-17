@@ -7,7 +7,10 @@
     exit;
   }
 
-
+  if(!isset($_SESSION['loggedin']) == true){
+    header('Location: ../../../signin.php');
+    exit;
+  }
   if(isset($_POST['landing'])){
     header('Location: ../../../Landing/index.php');
     exit;
@@ -83,7 +86,7 @@
                   </li>
   
                   <li>
-                    <a href="form_wizards.html">
+                    <a href="form_wizards.php">
                       <font color="black">
                         <i class="fa fa-edit"></i>
                         Wizard Form
@@ -94,7 +97,7 @@
   
                   
                   <li>
-                    <a href="echarts.html">
+                    <a href="echarts.php">
                       <font color="black"><i class="fa fa-bar-chart-o"></i>
                         E-Charts </font>
                     </a>
@@ -114,7 +117,7 @@
           </div>
         </div>
 
-      <!-- top navigation -->
+      <!-- top navigation harsh  top ka harami bhenchod -->
       <div class="top_nav">
         <div class="nav_menu">
           <div class="nav toggle">
@@ -128,11 +131,6 @@
                 </a>
                 <div class="dropdown-menu dropdown-usermenu pull-right" aria-labelledby="navbarDropdown">
                   <a class="dropdown-item" href="../../../profile/index.html"> Profile</a>
-                  <a class="dropdown-item" href="javascript:;">
-                    <span class="badge bg-red pull-right">50%</span>
-                    <span>Settings</span>
-                  </a>
-                  <a class="dropdown-item" href="javascript:;">Help</a>
                   <button style="display: inline; border: transparent solid 0px; background-color: transparent;" name="logout">
                     <a class="dropdown-item" href="../../../logout.php"><i class="fa fa-sign-out pull-right"></i> Log Out</a>
                   </button>
@@ -214,31 +212,24 @@
         <div class="row" style="display: inline-block;">
           <div class=" top_tiles" style="margin: 10px 0;">
             <div class="col-md-3 col-sm-3  tile">
-              <span>Total Sessions</span>
-              <h2>231,809</h2>
+              <span>Total Clients</span>
+              <h2>345,270</h2>
               <span class="sparkline_one" style="height: 160px;">
                 <canvas width="200" height="60" style="display: inline-block; vertical-align: top; width: 94px; height: 30px;"></canvas>
               </span>
             </div>
             <div class="col-md-3 col-sm-3  tile">
               <span>Total Revenue</span>
-              <h2>$ 231,809</h2>
+              <h2>$456,200</h2>
               <span class="sparkline_one" style="height: 160px;">
                 <canvas width="200" height="60" style="display: inline-block; vertical-align: top; width: 94px; height: 30px;"></canvas>
               </span>
             </div>
             <div class="col-md-3 col-sm-3  tile">
-              <span>Total Sessions</span>
+              <span>Total Company</span>
               <h2>231,809</h2>
               <span class="sparkline_one" style="height: 160px;">
                 <canvas width="200" height="60" style="display: inline-block; vertical-align: top; width: 94px; height: 125px;"></canvas>
-              </span>
-            </div>
-            <div class="col-md-3 col-sm-3  tile">
-              <span>Total Sessions</span>
-              <h2>231,809</h2>
-              <span class="sparkline_one" style="height: 160px;">
-                <canvas width="200" height="60" style="display: inline-block; vertical-align: top; width: 94px; height: 30px;"></canvas>
               </span>
             </div>
           </div>
@@ -420,25 +411,25 @@
                       <table class="tile_info">
                         <tr>
                           <td>
-                            <p><i class="fa fa-square blue"></i>IOS </p>
+                            <p><i class="fa fa-square blue"></i>Data Scientist</p>
                           </td>
                           <td>30%</td>
                         </tr>
                         <tr>
                           <td>
-                            <p><i class="fa fa-square green"></i>Android </p>
+                            <p><i class="fa fa-square green"></i>Web Developer</p>
                           </td>
                           <td>10%</td>
                         </tr>
                         <tr>
                           <td>
-                            <p><i class="fa fa-square purple"></i>Blackberry </p>
+                            <p><i class="fa fa-square purple"></i>Full Stack Developer</p>
                           </td>
                           <td>20%</td>
                         </tr>
                         <tr>
                           <td>
-                            <p><i class="fa fa-square aero"></i>Symbian </p>
+                            <p><i class="fa fa-square aero"></i>Product Manager</p>
                           </td>
                           <td>15%</td>
                         </tr>
@@ -455,323 +446,11 @@
               </div>
             </div>
           </div>
-
-          <div class="col-md-4 col-sm-6 ">
-            <div class="x_panel fixed_height_320">
-              <div class="x_title">
-                <h2>Profile Settings <small>Sessions</small></h2>
-                <ul class="nav navbar-right panel_toolbox">
-                  <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
-                  </li>
-                  <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                      <a class="dropdown-item" href="#">Settings 1</a>
-                      <a class="dropdown-item" href="#">Settings 2</a>
-                    </div>
-                  </li>
-                  <li><a class="close-link"><i class="fa fa-close"></i></a>
-                  </li>
-                </ul>
-                <div class="clearfix"></div>
-              </div>
-              <div class="x_content">
-                <div class="dashboard-widget-content">
-                  <ul class="quick-list">
-                    <li><i class="fa fa-line-chart"></i><a href="#">Achievements</a></li>
-                    <li><i class="fa fa-thumbs-up"></i><a href="#">Favorites</a></li>
-                    <li><i class="fa fa-calendar-o"></i><a href="#">Activities</a></li>
-                    <li><i class="fa fa-cog"></i><a href="#">Settings</a></li>
-                    <li><i class="fa fa-area-chart"></i><a href="#">Logout</a></li>
-                  </ul>
-
-                  <div class="sidebar-widget">
-                    <h4>Profile Completion</h4>
-                    <canvas width="150" height="80" id="chart_gauge_01" class="" style="width: 160px; height: 100px;"></canvas>
-                    <div class="goal-wrapper">
-                      <span id="gauge-text" class="gauge-value gauge-chart pull-left">0</span>
-                      <span class="gauge-value pull-left">%</span>
-                      <span id="goal-text" class="goal-value pull-right">100%</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-4 col-sm-6  widget_tally_box">
-            <div class="x_panel">
-              <div class="x_title">
-                <h2>User Uptake</h2>
-                <ul class="nav navbar-right panel_toolbox">
-                  <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
-                  </li>
-                  <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                      <a class="dropdown-item" href="#">Settings 1</a>
-                      <a class="dropdown-item" href="#">Settings 2</a>
-                    </div>
-                  </li>
-                  <li><a class="close-link"><i class="fa fa-close"></i></a>
-                  </li>
-                </ul>
-                <div class="clearfix"></div>
-              </div>
-              <div class="x_content">
-
-                <div id="graph_bar" style="width:100%; height:200px;"></div>
-
-                <div class=" bg-white progress_summary">
-
-                  <div class="row">
-                    <div class="progress_title">
-                      <span class="left">Escudor Wireless 1.0</span>
-                      <span class="right">This sis</span>
-                      <div class="clearfix"></div>
-                    </div>
-
-                    <div class="">
-                      <span>SSD</span>
-                    </div>
-                    <div class="">
-                      <div class="progress progress_sm">
-                        <div class="progress-bar bg-green" role="progressbar" data-transitiongoal="89"></div>
-                      </div>
-                    </div>
-                    <div class=" more_info">
-                      <span>89%</span>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="progress_title">
-                      <span class="left">Mobile Access</span>
-                      <span class="right">Smart Phone</span>
-                      <div class="clearfix"></div>
-                    </div>
-
-                    <div class="">
-                      <span>App</span>
-                    </div>
-                    <div class="">
-                      <div class="progress progress_sm">
-                        <div class="progress-bar bg-green" role="progressbar" data-transitiongoal="79"></div>
-                      </div>
-                    </div>
-                    <div class=" more_info">
-                      <span>79%</span>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="progress_title">
-                      <span class="left">WAN access users</span>
-                      <span class="right">Total 69%</span>
-                      <div class="clearfix"></div>
-                    </div>
-
-                    <div class="">
-                      <span>Usr</span>
-                    </div>
-                    <div class="">
-                      <div class="progress progress_sm">
-                        <div class="progress-bar bg-green" role="progressbar" data-transitiongoal="69"></div>
-                      </div>
-                    </div>
-                    <div class=" more_info">
-                      <span>69%</span>
-                    </div>
-                  </div>
-
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- start of weather widget -->
-          <div class="col-md-4 col-sm-6 ">
-            <div class="x_panel">
-              <div class="x_title">
-                <h2>Today's Weather <small>Sessions</small></h2>
-                <ul class="nav navbar-right panel_toolbox">
-                  <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
-                  </li>
-                  <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                      <a class="dropdown-item" href="#">Settings 1</a>
-                      <a class="dropdown-item" href="#">Settings 2</a>
-                    </div>
-                  </li>
-                  <li><a class="close-link"><i class="fa fa-close"></i></a>
-                  </li>
-                </ul>
-                <div class="clearfix"></div>
-              </div>
-              <div class="x_content">
-                <div class="row">
-                  <div class="col-sm-12">
-                    <div class="temperature"><b>Monday</b>, 07:30 AM
-                      <span>F</span>
-                      <span><b>C</b>
-                      </span>
-                    </div>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="col-sm-4">
-                    <div class="weather-icon">
-                      <span>
-                        <canvas height="84" width="84" id="partly-cloudy-day"></canvas>
-                      </span>
-
-                    </div>
-                  </div>
-                  <div class="col-sm-8">
-                    <div class="weather-text">
-                      <h2>Texas
-                        <br><i>Partly Cloudy Day</i>
-                      </h2>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-sm-12">
-                  <div class="weather-text pull-right">
-                    <h3 class="degrees">23</h3>
-                  </div>
-                </div>
-                <div class="clearfix"></div>
-
-
-                <div class="row weather-days">
-                  <div class="col-sm-2">
-                    <div class="daily-weather">
-                      <h2 class="day">Mon</h2>
-                      <h3 class="degrees">25</h3>
-                      <span>
-                        <canvas id="clear-day" width="32" height="32">
-                        </canvas>
-
-                      </span>
-                      <h5>15
-                        <i>km/h</i>
-                      </h5>
-                    </div>
-                  </div>
-                  <div class="col-sm-2">
-                    <div class="daily-weather">
-                      <h2 class="day">Tue</h2>
-                      <h3 class="degrees">25</h3>
-                      <canvas height="32" width="32" id="rain"></canvas>
-                      <h5>12
-                        <i>km/h</i>
-                      </h5>
-                    </div>
-                  </div>
-                  <div class="col-sm-2">
-                    <div class="daily-weather">
-                      <h2 class="day">Wed</h2>
-                      <h3 class="degrees">27</h3>
-                      <canvas height="32" width="32" id="snow"></canvas>
-                      <h5>14
-                        <i>km/h</i>
-                      </h5>
-                    </div>
-                  </div>
-                  <div class="col-sm-2">
-                    <div class="daily-weather">
-                      <h2 class="day">Thu</h2>
-                      <h3 class="degrees">28</h3>
-                      <canvas height="32" width="32" id="sleet"></canvas>
-                      <h5>15
-                        <i>km/h</i>
-                      </h5>
-                    </div>
-                  </div>
-                  <div class="col-sm-2">
-                    <div class="daily-weather">
-                      <h2 class="day">Fri</h2>
-                      <h3 class="degrees">28</h3>
-                      <canvas height="32" width="32" id="wind"></canvas>
-                      <h5>11
-                        <i>km/h</i>
-                      </h5>
-                    </div>
-                  </div>
-                  <div class="col-sm-2">
-                    <div class="daily-weather">
-                      <h2 class="day">Sat</h2>
-                      <h3 class="degrees">26</h3>
-                      <canvas height="32" width="32" id="cloudy"></canvas>
-                      <h5>10
-                        <i>km/h</i>
-                      </h5>
-                    </div>
-                  </div>
-                  <div class="clearfix"></div>
-                </div>
-              </div>
-            </div>
-
-          </div>
-          <!-- end of weather widget -->
-
-          <div class="col-md-4 col-sm-6 ">
-            <div class="x_panel fixed_height_320">
-              <div class="x_title">
-                <h2>Incomes <small>Sessions</small></h2>
-                <ul class="nav navbar-right panel_toolbox">
-                  <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
-                  </li>
-                  <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                      <a class="dropdown-item" href="#">Settings 1</a>
-                      <a class="dropdown-item" href="#">Settings 2</a>
-                    </div>
-                  </li>
-                  <li><a class="close-link"><i class="fa fa-close"></i></a>
-                  </li>
-                </ul>
-                <div class="clearfix"></div>
-              </div>
-              <div class="x_content">
-                <div class="dashboard-widget-content">
-                  <ul class="quick-list">
-                    <li><i class="fa fa-bars"></i><a href="#">Subscription</a></li>
-                    <li><i class="fa fa-bar-chart"></i><a href="#">Auto Renewal</a> </li>
-                    <li><i class="fa fa-support"></i><a href="#">Help Desk</a> </li>
-                    <li><i class="fa fa-heart"></i><a href="#">Donations</a> </li>
-                  </ul>
-
-                  <div class="sidebar-widget">
-                    <h4>Goal</h4>
-                    <canvas width="150" height="80" id="chart_gauge_02" class="" style="width: 160px; height: 100px;"></canvas>
-                    <div class="goal-wrapper">
-                      <span class="gauge-value pull-left">$</span>
-                      <span id="gauge-text2" class="gauge-value pull-left">3,200</span>
-                      <span id="goal-text2" class="goal-value pull-right">$5,000</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </div>
-    <!-- /page content -->
-
-    <!-- footer content -->
-    <!-- <footer>
-      <div class="pull-right">
-        Gentelella - Bootstrap Admin Template by <a href="https://colorlib.com">Colorlib</a>
-      </div>
-      <div class="clearfix"></div>
-    </footer> -->
-    <!-- /footer content -->
   </div>
   </div>
-
   <!-- jQuery -->
   <script src="../vendors/jquery/dist/jquery.min.js"></script>
   <!-- Bootstrap -->
@@ -811,7 +490,6 @@
 
   <!-- Custom Theme Scripts -->
   <script src="../build/js/custom.min.js"></script>
-
 </body>
 
 </html>

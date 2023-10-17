@@ -13,7 +13,6 @@ if (isset($_POST['submit'])) {
     $check_email = false;
     $check_password = false;
 
-
     $sql = "select * from `employee` where email='$email'";
     $result = mysqli_query($conn, $sql);
     if ($password == $repassword) {
@@ -26,6 +25,8 @@ if (isset($_POST['submit'])) {
         if ($check_password == true) {
             $sql = "INSERT INTO `employee` (`email`, `password`, `name`, `time`) VALUES ('$email', '$hash', '$name', current_timestamp())";
             $result = mysqli_query($conn, $sql);
+            $_SESSION['loggedin'] = true;
+            $_SESSION['session_email'] = $email;
             header('Location: dashboard/Employee/Production/index3.php');
             exit;
         }else{

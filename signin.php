@@ -1,12 +1,11 @@
 <?php
-require ('./_conn.php');
+require ('./_conn.php'); 
 if(isset($_SESSION['loggedin']) == false)
 {
     if (isset($_POST['submit'])) 
     {
         $useremail = $_POST['email'];
         $password = $_POST['your_pass'];
-
         // selct password from wmail na mase to wrong email 
         //check password with password_verify 
         // true thai to redirect
@@ -19,10 +18,14 @@ if(isset($_SESSION['loggedin']) == false)
             $password_varification = password_verify($password,$hashed_password );
             if($password_varification){
                 $_SESSION['loggedin'] = true;
+                $_SESSION['session_email'] = $email;
                 header('Location: dashboard/Employee/Production/index3.php');
                 exit;
             }
-            //else
+            else{
+                header("location: ./signin.php");
+                exit;
+            }
             
         }
 
@@ -31,20 +34,21 @@ if(isset($_SESSION['loggedin']) == false)
 else{
 
     
-    $session_email = $_SESSION['session_email'];
-    $sql = "SELECT * FROM `employee` where email='$session_email'";
+    $sql = "SELECT * FROM `employee` where email='$session_email'";// session yet to declare 
     $result = mysqli_query($conn, $sql);
         if ($result) {
             header('Location: dashboard\Employee\Production\index3.php');
             exit;
             }
-    $sql = "SELECT * FROM `hr` where email='$session_email'";
+    $sql = "SELECT * FROM `hr` where email='$session_email'";// session yet to declare
     $result_hr = mysqli_query($conn, $sql);
         if ($result_hr) {
             header('Location: dashboard\Employee\Production\index3.php');
             exit;
 
         }
+
+
 }
     
 ?>
