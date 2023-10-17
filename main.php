@@ -1,5 +1,5 @@
 <?php
-require '_conn.php';
+require './login/_conn.php';
 
 
 ?>
@@ -61,14 +61,14 @@ require '_conn.php';
           <form class="ps-lg-5">
             <button class="btn btn-lg btn-klean-outline order-0 fs-0" type="submit">
               <span class="text-gradient fw-bold">
-                <a href="./signin.php"> Sign In
+                <a href="./login/signin.php"> Sign In
                 </a></span></button>
 
 
 
             <button class="btn btn-lg btn-klean-outline order-0 fs-0" type="submit">
               <span class="text-gradient fw-bold">
-                <a href="./signup.php">Sign
+                <a href="./login/signup.php">Sign
                   Up</a></span></button>
 
           </form>

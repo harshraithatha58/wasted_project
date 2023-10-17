@@ -27,7 +27,7 @@ if (isset($_POST['submit'])) {
             $result = mysqli_query($conn, $sql);
             $_SESSION['loggedin'] = true;
             $_SESSION['session_email'] = $email;
-            header('Location: dashboard/Employee/Production/index3.php');
+            header('Location:../dashboard/Employee/Production/index3.php');
             exit;
         }else{
             header('Location: ./signup.php');
@@ -50,11 +50,12 @@ if (isset($_POST['submit'])) {
     <title>Sign Up Form</title>
 
     <!-- Font Icon -->
-    <link rel="stylesheet" href="./colorlib-regform-7/colorlib-regform-7/css/style.css">
+    <link rel="stylesheet" href="../colorlib-regform-7/colorlib-regform-7/css/style.css">
+
 
     <!-- Main css -->
-    <link rel="stylesheet" href="./colorlib-regform-7/colorlib-regform-7/css/style.css">
-    <link rel="stylesheet" href="colorlib-regform-7/colorlib-regform-7/fonts/material-icon/css/material-design-iconic-font.css">
+    <link rel="stylesheet" href="../colorlib-regform-7/colorlib-regform-7/css/style.css">
+    <link rel="stylesheet" href="../colorlib-regform-7/colorlib-regform-7/fonts/material-icon/css/material-design-iconic-font.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 
 </head>
@@ -100,7 +101,7 @@ if (isset($_POST['submit'])) {
                         </form>
                     </div>
                     <div class="signup-image">
-                        <figure><img src="colorlib-regform-7/colorlib-regform-7/images/signup-image.jpg" alt="sing up image"></figure>
+                        <figure><img src="../colorlib-regform-7/colorlib-regform-7/images/signup-image.jpg" alt="sing up image"></figure>
                         <a href="./signin.php" class="signup-image-link">I am already member</a>
                         <a href="./hr_signup.php" class="signup-image-link mt-2">Sign up as HR</a>
                     </div>

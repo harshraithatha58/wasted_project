@@ -1,5 +1,5 @@
 <?php
-require ('./_conn.php'); 
+require ('_conn.php'); 
 if(isset($_SESSION['loggedin']) == false)
 {
     if (isset($_POST['submit'])) 
@@ -43,7 +43,7 @@ else{
     $sql = "SELECT * FROM `hr` where email='$session_email'";// session yet to declare
     $result_hr = mysqli_query($conn, $sql);
         if ($result_hr) {
-            header('Location: dashboard\Employee\Production\index3.php');
+            header('Location: ../dashboard\Employee\Production\index3.php');
             exit;
 
         }
@@ -63,22 +63,22 @@ else{
     <title>Sign In</title>
 
     <!-- Font Icon -->
-    <link rel="stylesheet" href="fonts/material-icon/css/material-design-iconic-font.min.css">
+    <link rel="stylesheet" href="../colorlib-regform-7/colorlib-regform-7/fonts/material-icon/css/material-design-iconic-font.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 
     <!-- Main css -->
-    <link rel="stylesheet" href="colorlib-regform-7/colorlib-regform-7/css/style.css">
+    <link rel="stylesheet" href="../colorlib-regform-7/colorlib-regform-7/css/style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicons/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicons/favicon-16x16.png">
-    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicons/favicon.ico">
-    <link rel="manifest" href="assets/img/favicons/manifest.json">
-    <meta name="msapplication-TileImage" content="assets/img/favicons/mstile-150x150.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/img/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/img/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/img/favicons/favicon-16x16.png">
+    <link rel="shortcut icon" type="image/x-icon" href="../assets/img/favicons/favicon.ico">
+    <link rel="manifest" href="../assets/img/favicons/manifest.json">
+    <meta name="msapplication-TileImage" content="../assets/img/favicons/mstile-150x150.png">
     <meta name="theme-color" content="#ffffff">
-    <link href="assets/css/theme.css" rel="stylesheet" />
+    <link href="../assets/css/theme.css" rel="stylesheet" />
 
 </head>
 
@@ -90,7 +90,7 @@ else{
         <div class="container" style="margin-top: 5%;">
             <div class="signin-content">
                 <div class="signin-image">
-                    <figure><img src="colorlib-regform-7/colorlib-regform-7/images/signin-image.jpg"
+                    <figure><img src="../colorlib-regform-7/colorlib-regform-7/images/signin-image.jpg"
                             alt="sing in image"></figure>
                     <a href="signup.php" class="signup-image-link">Create an account</a>
                 </div>

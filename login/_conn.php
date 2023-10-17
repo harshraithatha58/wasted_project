@@ -14,4 +14,7 @@
     if(!$conn){
         die("Connecting failed");
     }
+    else{
+        echo "sucess :: bhagu don";
+    }
 ?>
