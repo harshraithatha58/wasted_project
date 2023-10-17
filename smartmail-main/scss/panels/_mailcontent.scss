@@ -1,0 +1,364 @@
+.mailcontent-show {
+  .mailbox { transform: translateX(-100%); }
+
+  .mailcontent {
+    left: 0;
+    @include media-breakpoint-up(md) { left: $sidebar-width; }
+  }
+
+  &.sidebar-hide .mailcontent {
+    @include media-breakpoint-up(md) { left: 0; }
+  }
+}
+
+.mailcontent {
+  position: fixed;
+  top: 0;
+  left: 100%;
+  width: 100vw;
+  height: 100vh;
+  background-color: $color-bg-01;
+  @include transition(all 0.3s);
+
+  @include media-breakpoint-up(md) {
+    width: calc(100vw - #{$sidebar-width});
+  }
+
+  @include media-breakpoint-up(xl) {
+    width: auto;
+    display: block;
+    left: $sidebar-width + 390px;
+    right: 0;
+  }
+}
+
+.mailcontent-item {
+  position: relative;
+  padding: 0 15px;
+
+  @include media-breakpoint-up(md) {
+    padding: 0 25px;
+  }
+
+  &:first-child .mailcontent-header {
+    @include media-breakpoint-down(md) {
+      padding-top: 0;
+    }
+  }
+}
+
+.mailcontent-subject {
+  padding: 10px;
+
+  @include media-breakpoint-up(md) { padding: 20px; }
+
+  @include media-breakpoint-up(xl) {
+    display: flex;
+    flex-direction: row-reverse;
+    padding: 25px;
+  }
+
+  h4 {
+    flex: 1;
+    color: $color-tx-01;
+    text-indent: -1px;
+    margin-top: 8px;
+    margin-bottom: 0;
+    line-height: 1.4;
+    padding-left: 5px;
+
+    @include media-breakpoint-up(xl) {
+      margin-top: 0;
+      margin-right: 25px;
+      padding-left: 0;
+    }
+  }
+
+  .nav {
+    flex-shrink: 0;
+    margin-top: 2.5px;
+    margin-left: auto;
+  }
+
+  .nav-link {
+    &:first-child {
+      margin-right: auto;
+
+      @include media-breakpoint-up(xl) { display: none; }
+    }
+  }
+
+  .nav-link i { font-size: 20px; }
+}
+
+.mailcontent-header {
+  padding: 15px 0;
+  display: flex;
+  align-items: center;
+
+  .mail-avatar {
+    width: 32px;
+    height: 32px;
+
+    @include media-breakpoint-up(md) {
+      width: 38px;
+      height: 38px;
+    }
+  }
+
+  .nav {
+    padding-left: 5px;
+    margin-right: -5px;
+
+    @include media-breakpoint-up(md) {
+      padding-left: 10px;
+      margin-right: 0;
+    }
+  }
+
+  .nav-link i { font-size: 18px; }
+}
+
+.mailcontent-subject,
+.mailcontent-header {
+  .nav { position: relative; }
+
+  .nav-link {
+    padding: 0;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    color: $color-tx-02;
+
+    + .nav-link {
+      @include media-breakpoint-up(md) { margin-left: 2px; }
+    }
+
+    &:hover,
+    &:focus {
+      background-color: rgba($color-bg-03, .6);
+    }
+
+    &:last-child { width: 16px; }
+  }
+}
+
+.mailcontent-sender {
+  flex: 1;
+  padding-left: 8px;
+
+  @include media-breakpoint-up(md) { padding-left: 8px; }
+
+  h6 {
+    font-size: 14px;
+    color: $color-tx-01;
+    margin-bottom: 0;
+
+    @include media-breakpoint-up(md) { margin-bottom: 2px; }
+
+    span {
+      color: $color-tx-03;
+      font-weight: 400;
+      font-size: 13px;
+      display: none;
+
+      @include media-breakpoint-up(md) { display: inline-block; }
+    }
+  }
+
+  p {
+    margin-bottom: 0;
+    font-size: 12px;
+
+    @include media-breakpoint-up(md) { font-size: 13px; }
+  }
+}
+
+.mailcontent-time {
+  font-size: 11px;
+  font-weight: 400;
+  color: $color-tx-03;
+  padding-left: 10px;
+
+  @include media-breakpoint-up(md) { font-size: 12px; }
+
+  span {
+    display: none;
+    @include media-breakpoint-up(md) { display: inline-block; }
+  }
+}
+
+.mailcontent-body {
+  background-color: #fff;
+  padding: 15px 20px 20px;
+  border-radius: 5px;
+  @include shadow-sharp($color-bg-03);
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.7;
+  color: $color-tx-02;
+
+  @include media-breakpoint-up(md) {
+    margin: 10px 0;
+    padding: 20px 25px 25px;
+  }
+
+  hr {
+    background-color: $color-tx-03;
+    margin-top: 25px;
+    margin-bottom: 25px;
+  }
+}
+
+.mailcontent-label {
+  display: block;
+  font-size: 11px;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: $color-tx-03;
+  letter-spacing: 1px;
+  margin-bottom: 15px;
+}
+
+.attachment-group {
+  position: relative;
+
+  @include media-breakpoint-up(md) {
+    display: flex;
+  }
+}
+
+.attachment-item {
+  background-color: rgba($color-bg-02, .6);
+  padding: 10px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+
+  @include media-breakpoint-up(lg) {
+    min-width: 240px;
+  }
+
+  + .attachment-item {
+    margin-top: 10px;
+
+    @include media-breakpoint-up(md) {
+      margin-top: 0;
+      margin-left: 10px;
+    }
+  }
+}
+
+.attachment-icon {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  border-radius: inherit;
+  @include shadow-sharp($color-bg-03);
+
+  @include media-breakpoint-up(lg) {
+    width: 50px;
+    height: 50px;
+  }
+
+  i {
+    font-size: 28px;
+    line-height: 1;
+  }
+}
+
+.attachment-body {
+  flex: 1;
+  padding-left: 10px;
+
+  h6 {
+    margin-bottom: 2px;
+    font-size: 14px;
+    color: $color-tx-01;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+
+    &:hover,
+    &:focus { color: $color-primary; }
+  }
+
+  span {
+    display: block;
+    font-size: 12px;
+    color: $color-tx-03;
+  }
+}
+
+.mailcontent-footer {
+  padding: 15px;
+  display: flex;
+  align-items: center;
+
+  @include media-breakpoint-up(md) {
+    padding: 25px;
+  }
+
+  .btn {
+    font-size: 14px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+
+    + .btn { margin-left: 10px; }
+  }
+}
+
+.card-mail {
+  border-color: $color-secondary;
+  background-color: rgba($color-secondary, .08);
+  border-width: 1.5px;
+  border-radius: 0;
+
+  .card-body {
+    padding: 20px 25px;
+    font-size: 14px;
+  }
+
+  .card-title {
+    color: $color-tx-01;
+    margin-bottom: 12px;
+  }
+
+  ul {
+    margin-bottom: 0;
+    margin-left: 0;
+    padding-left: 15px;
+  }
+}
+
+.mailcontent-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  i {
+    font-size: 128px;
+    line-height: 1;
+    margin-bottom: 10px;
+    color: $color-tx-03;
+    opacity: .6;
+  }
+
+  h5 {
+    font-weight: 400;
+    color: $color-tx-03;
+    margin-bottom: 0;
+  }
+}

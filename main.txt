@@ -1,0 +1,14 @@
+dont touch this pls --
+sql querry insert into employee
+INSERT INTO `companies` (`srno`, `name_of_company`, `cin`, `ceo_founder`, `address`, `email`, `password`, `description`, `time`) VALUES ('1', 'admin', '1234567890987654321', 'harsh raithatha', 'online', 'admin@majduri.com', 'majdurileloguys', '.....', current_timestamp());
+
+
+// lines bellow
+INSERT INTO `employee` (`srno`, `email`, `password`, `name`, `address`, `cv_resume`, `discription`, `website`, `time`) VALUES ('1', 'eg@gmail.com', '12345', 'admin', '...................', './././../././././././././././././', 'none', 'kjfsdkhfkhf.com\r\n', current_timestamp());
+
+<?php
+    required('_conn.php');
+?>
+
+for count in result: 
+    print("Count:", count); 
